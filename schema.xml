@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbe:messageSchema xmlns:sbe="http://fixprotocol.io/2016/sbe"
+                   package="sbeschema"
+                   id="1"
+                   version="1"
+                   semanticVersion="1"
+                   description="Client Server Communication"
+                   byteOrder="littleEndian">
+    <types>
+        <composite name="messageHeader" description="Message header">
+            <type name="schemaId" primitiveType="uint16"/>
+            <type name="version" primitiveType="uint16"/>
+            <type name="templateId" primitiveType="uint16"/>
+            <type name="blockLength" primitiveType="uint16"/>
+        </composite>
+
+    </types>
+
+    <sbe:message name="NewPlayer" id="108" description="The client will send this message for the first time he/she joins">
+    </sbe:message>
+
+
+</sbe:messageSchema>
